@@ -1146,6 +1146,21 @@ class PlayState extends MusicBeatState
 		healthBarBG.yAdd = -4;
 		add(healthBarBG);
 		if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
+		
+		if(ClientPrefs.healthBarType == 'Arrow Funk')
+		{
+		healthBarBG.visible = 0;
+
+		healthBarOV = new AttachedSprite('healthBarOVArrowFunk');
+		healthBarOV.y = FlxG.height * 0.89;
+		healthBarOV.screenCenter(X);
+		healthBarOV.scrollFactor.set();
+		healthBarOV.visible = !ClientPrefs.hideHud;
+		healthBarOV.xAdd = -4;
+		healthBarOV.yAdd = -4;
+		add(healthBarOV);
+		}
+if(ClientPrefs.downScroll) healthBarOV.y = 0.11 * FlxG.height;
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
 			'health', 0, 2);
@@ -1155,6 +1170,7 @@ class PlayState extends MusicBeatState
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
+		
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
