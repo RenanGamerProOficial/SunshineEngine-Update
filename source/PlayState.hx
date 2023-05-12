@@ -1150,7 +1150,7 @@ class PlayState extends MusicBeatState
 		
 		if(ClientPrefs.healthBarType == 'Arrow Funk')
 		{
-		healthBarBG.visible = 0;
+		healthBarBG.visible = true;
 
 		healthBarOV = new AttachedSprite('healthBarOVArrowFunk');
 		healthBarOV.y = FlxG.height * 0.89;
@@ -1208,6 +1208,7 @@ if(ClientPrefs.downScroll) healthBarOV.y = 0.11 * FlxG.height;
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
+		healthBarOV.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
