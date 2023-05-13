@@ -3095,6 +3095,10 @@ class PlayState extends MusicBeatState
 		if (health > 2)
 			health = 2;
 
+        if(ClientPrefs.healthBarType == 'Normal')
+        
+        {
+        
 		if (healthBar.percent < 20)
 			iconP1.animation.curAnim.curFrame = 1;
 		else
@@ -3104,7 +3108,27 @@ class PlayState extends MusicBeatState
 			iconP2.animation.curAnim.curFrame = 1;
 		else
 			iconP2.animation.curAnim.curFrame = 0;
+			
+		}
+			if(ClientPrefs.healthBarType == 'Arrow Funk')
+			
+		{
+			if (healthBar.percent < 20)
+			iconP1.animation.curAnim.curFrame = 1;
+		else if (healthBar.percent > 80)
+			iconP1.animation.curAnim.curFrame = 2;
+		else
+			iconP1.animation.curAnim.curFrame = 0;
 
+		if (healthBar.percent > 80)
+			iconP2.animation.curAnim.curFrame = 1;
+		else if (healthBar.percent < 20)
+			iconP2.animation.curAnim.curFrame = 2;
+		else
+			iconP2.animation.curAnim.curFrame = 0;
+			
+         }
+            
 		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene) {
 			persistentUpdate = false;
 			paused = true;
