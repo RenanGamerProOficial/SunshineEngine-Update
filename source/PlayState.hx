@@ -1137,9 +1137,7 @@ class PlayState extends MusicBeatState
 
 		FlxG.fixedTimestep = false;
 		moveCameraSection();
-		
-		if(ClientPrefs.healthBarType == 'Normal')
-        {
+	
 
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
@@ -1150,7 +1148,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.yAdd = -4;
 		add(healthBarBG);
 		
-		}
+		
 		if(ClientPrefs.downScroll) healthBarBG.y = 0.11 * FlxG.height;
 		
 		if(ClientPrefs.healthBarType == 'Arrow Funk')
