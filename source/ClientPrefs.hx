@@ -219,7 +219,7 @@ class ClientPrefs {
 			timeBarType = FlxG.save.data.timeBarType;
 		}
 		if(FlxG.save.data.healthBarType != null) {
-			timeBarType = FlxG.save.data.healthBarType;
+			healthBarType = FlxG.save.data.healthBarType;
 		}
 		if(FlxG.save.data.scoreZoom != null) {
 			scoreZoom = FlxG.save.data.scoreZoom;
