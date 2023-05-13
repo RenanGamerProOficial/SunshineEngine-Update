@@ -1156,8 +1156,6 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.healthBarType == 'Arrow Funk')
 		{
 		
-		healthBarBG.visible = false;
-
 		healthBarOV = new AttachedSprite('healthBarOVArrowFunk');
 		healthBarOV.y = FlxG.height * 0.89;
 		healthBarOV.screenCenter(X);
